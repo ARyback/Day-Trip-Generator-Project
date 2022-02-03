@@ -1,45 +1,3 @@
-import random
-
-destination_list = ['Milwaukee', 'Chicago', 'Wausau', 'Green Bay', 'Minneapolis']
-restaurant_list = ['Calderone Club', 'County Clare', 'Crafty Cow', 'BBQ City' , 'Cada de Alberto']
-transportation_list = ['Car', 'Plane', 'Train', 'Truck', 'Motorcycle']
-entertainment_list = ['Jimmy Buffett Concert', 'Football Game', 'Museum Tour', 'Comedy Show', 'Brewery Tour']
-
-def welcome():
-    print('Welcome to the day trip generator! You came to the right place!')
-
-def congratulations():
-    print('Congratulations on all your selections!')
-
-def option_generator(option_list):
-    user_choice = 'n'
-    while user_choice == 'n':
-        rand_option = option_list[random.randint(0, 4)]
-        input_choice = input(f'We have selected {rand_option} as your choice! Do you like it? Enter y or n: ')
-        if input_choice == 'y':
-            print(f'Congratulations on choosing {rand_option}! Let us move on')
-            break
-        else:
-            rand_option = option_list[random.randint(0, 4)]
-            input_choice = input(f'We have selected {rand_option} as your choice! How does this sound? Enter y or n: ')
-            user_choice = input_choice
-            if user_choice == 'y':
-                print(f'Congratulations on choosing {rand_option}! Let us move on.')
-                break
-            else:
-                rand_option = option_list[random.randint(0, 4)]
-                input_choice = input(f'We have selected {rand_option} as your choice! How does this sound? Enter y or n: ')
-                user_choice = rand_option
-
-def day_trip_generator():
-    welcome()
-    destination_generator = option_generator(destination_list)
-    restaurant_generator = option_generator(restaurant_list)
-    transportation_generator = option_generator(transportation_list)
-    entertainment_generator = option_generator(entertainment_list)
-    congratulations()
-
-day_trip_generator()
 
 # user_dest = 'n'
 # while user_dest == 'n':
@@ -116,4 +74,3 @@ day_trip_generator()
 #             user_ent = entertainment_option
 
 # print(f'Congratulations on going to {rand_destination} via {rand_transportation} to eat at {rand_restaurant} and see {rand_ent}.')
-
