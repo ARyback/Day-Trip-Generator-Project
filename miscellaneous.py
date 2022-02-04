@@ -1,4 +1,23 @@
 
+#     user_choice = 'n'
+#     while user_choice == 'n':
+#         rand_option = option_list[random.randint(0, 4)]
+#         input_choice = input(f'We have selected {rand_option} as your choice! Do you like it? Enter y or n: ')
+#         if input_choice == 'y':
+#             print(f'Congratulations on choosing {rand_option}! Let us move on')
+#             break
+
+#         # else:
+        #     rand_option = option_list[random.randint(0, 4)]
+        #     input_choice = input(f'We have selected {rand_option} as your choice! How does this sound? Enter y or n: ')
+        #     user_choice = input_choice
+        #     if user_choice == 'y':
+        #         print(f'Congratulations on choosing {rand_option}! Let us move on.')
+        #         break
+        #     else:
+        #         rand_option = option_list[random.randint(0, 4)]
+        #         input_choice = input(f'We have selected {rand_option} as your choice! How does this sound? Enter y or n: ')
+        #         user_choice = rand_option
 # user_dest = 'n'
 # while user_dest == 'n':
 #     rand_destination = destination_list[random.randint(0, 4)]
