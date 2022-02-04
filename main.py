@@ -5,13 +5,21 @@ restaurant_list = ['Calderone Club', 'County Clare', 'Crafty Cow', 'BBQ City' , 
 transportation_list = ['Car', 'Plane', 'Train', 'Truck', 'Motorcycle']
 entertainment_list = ['Jimmy Buffett Concert', 'Football Game', 'Museum Tour', 'Comedy Show', 'Brewery Tour']
 
-total_list = [[destination_list], [restaurant_list], [transportation_list], [entertainment_list]]
-
-choose_initial = input(f"Do you like the initial trip we picked for you? y or n: ")
+#total_list = [[destination_list], [restaurant_list], [transportation_list], [entertainment_list]]
 
 def initial_option(option_list):
     rand_option = option_list[random.randint(0, 4)]
     return rand_option
+
+def trip_final(destination, restaurant, transportation, vehicle):
+    destination = "Congratulations on finalizing your trip to {destination}!"
+    restaurant = "It will be great diningg {restaurant} as your restaurant!"
+    transportation = "You are going to enjoy traveling by {transportation}."
+    entertainment = "But you will especially love {entertainment}."
+    return destination
+    return restaurant
+    return transportation
+    return entertainment
 
 def initial_trip():
     initial_destination = initial_option(destination_list)
@@ -33,15 +41,17 @@ def option_generator(option_list, activity):
 
 def day_trip_generator():
     initial_trip()
-    choose_initial
+    choose_initial = input(f"Do you like the initial trip we picked for you? y or n: ")
     if choose_initial == "n":
         destination_generator = option_generator(destination_list, "destination")
         restaurant_generator = option_generator(restaurant_list, "restaurant")
         transportation_generator = option_generator(transportation_list, "mode of transportation")
         entertainment_generator = option_generator(entertainment_list, "entertainment")
-        print(f"Congratulations on choosing {destination_generator} as your destination, {restaurant_generator} as your restaurant, {transportation_generator} as your transportation, and {entertainment_generator} as your entertainment.")
+        print(trip_final(destination_generator, restaurant_generator, transportation_generator, entertainment_generator))
     
 day_trip_generator()
+
+
 
 
 
