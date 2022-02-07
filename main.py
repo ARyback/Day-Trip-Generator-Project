@@ -24,11 +24,11 @@ def trip_final(destination, restaurant, transportation, entertainment):
 
 def option_generator(option_list, activity):
     while True:
-        rand_option = option_list[random.randint(0, len(option_list) - 1)]
-        input_choice = input(f"We have selected {rand_option} as your {activity}! Do you like it? Enter y or n: ")
+        contingent_option = option(option_list)
+        input_choice = input(f"We have selected {contingent_option} as your {activity}! Do you like it? Enter y or n: ")
         if input_choice == "y":
-            print(f"Congratulations on choosing {rand_option} as your {activity}! Let us move on")
-            return rand_option
+            print(f"Congratulations on choosing {contingent_option} as your {activity}! Let us move on")
+            return contingent_option
             break
 
 def day_trip_generator():
