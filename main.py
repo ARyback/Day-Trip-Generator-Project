@@ -5,13 +5,16 @@ restaurant_list = ["Calderone Club", "County Clare", "Crafty Cow", "BBQ City", "
 transportation_list = ["Car", "Plane", "Train", "Truck", "Motorcycle"]
 entertainment_list = ["Jimmy Buffett Concert", "Football Game", "Museum Tour", "Comedy Show", "Brewery Tour"]
 
-destination_option = destination_list[random.randint(0, 4)]
-restaurant_option = restaurant_list[random.randint(0, 4)]
-transportation_option = transportation_list[random.randint(0, 4)]
-entertainment_option = entertainment_list[random.randint(0, 4)]
+def option(list_option):
+    return list_option[random.randint(0, len(list_option) - 1)]
+
+destination_option = option(destination_list)
+restaurant_option = option(restaurant_list)
+transportation_option = option(transportation_list)
+entertainment_option = option(entertainment_list)
 
 def initial_option(option_list):
-    rand_option = option_list[random.randint(0, 4)]
+    rand_option = option_list[random.randint(0, len(option_list) - 1)]
     return rand_option
 
 def initial_trip():
@@ -25,7 +28,7 @@ def trip_final(destination, restaurant, transportation, entertainment):
 
 def option_generator(option_list, activity):
     while True:
-        rand_option = option_list[random.randint(0, 4)]
+        rand_option = option_list[random.randint(0, len(option_list) - 1)]
         input_choice = input(f"We have selected {rand_option} as your {activity}! Do you like it? Enter y or n: ")
         if input_choice == "y":
             print(f"Congratulations on choosing {rand_option} as your {activity}! Let us move on")
