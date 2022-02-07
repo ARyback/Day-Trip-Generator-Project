@@ -13,10 +13,6 @@ restaurant_option = option(restaurant_list)
 transportation_option = option(transportation_list)
 entertainment_option = option(entertainment_list)
 
-def initial_option(option_list):
-    rand_option = option_list[random.randint(0, len(option_list) - 1)]
-    return rand_option
-
 def initial_trip():
     print(f"Congratulations on choosing {destination_option} as your destination, {restaurant_option} as your restaurant, {transportation_option} as your transportation, and {entertainment_option} as your entertainment.")  
 
